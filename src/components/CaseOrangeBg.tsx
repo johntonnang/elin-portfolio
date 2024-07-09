@@ -39,7 +39,7 @@ const CaseOrangeBg: FC<CaseProps> = ({
             width="0"
             height="0"
             sizes="100vw"
-            className="h-full w-auto object-cover"
+            className="h-full w-full object-cover"
           />
           <div className="bg-background-white flex w-full max-w-[450px] flex-col py-10 pl-10 pr-14">
             <h3 className="text-background-orange text-14 mb-6 uppercase">
