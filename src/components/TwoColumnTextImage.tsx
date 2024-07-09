@@ -28,7 +28,7 @@ const TwoColumnTextImage: React.FC<TwoColumnTextImageProps> = ({
             className="h-auto w-full object-cover lg:h-full lg:w-auto"
           />
           <CanvasDraw className="absolute left-0 top-0 h-full w-full" />
-          <span className="text-32 text-background-orange font-reenie absolute bottom-28 left-10 w-[170px] -rotate-[7deg] text-center lg:-left-[106px]">
+          <span className="text-32 text-background-orange font-reenie absolute bottom-28 left-10 hidden w-[170px] -rotate-[7deg] text-center lg:-left-[106px] lg:block">
             Click to draw something
           </span>
         </div>
