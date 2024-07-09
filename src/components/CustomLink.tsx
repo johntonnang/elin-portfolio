@@ -4,9 +4,10 @@ import { LinkType } from '~types/index';
 
 interface LinkProps {
   link: LinkType;
+  onClick?: () => void;
 }
 
-const CustomLink: React.FC<LinkProps> = ({ link }) => {
+const CustomLink: React.FC<LinkProps> = ({ link, onClick }) => {
   let href = '';
   let ariaLabel = '';
 
@@ -39,6 +40,7 @@ const CustomLink: React.FC<LinkProps> = ({ link }) => {
       aria-label={ariaLabel}
       target={link.linkType === 'external' ? '_blank' : undefined}
       rel={link.linkType === 'external' ? 'noopener noreferrer' : undefined}
+      onClick={onClick}
     >
       {link.icon ? (
         <Image src={link.icon.url} alt={link.title} width={32} height={32} />

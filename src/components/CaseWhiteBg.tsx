@@ -27,12 +27,12 @@ const CaseWhiteBg: FC<CaseProps> = ({
 }) => {
   return (
     <section id="projects" className="bg-background-white flex h-full w-full">
-      <div className="mx-auto flex h-screen w-screen max-w-[1440px] flex-col justify-center pl-[142px] pr-[137px]">
+      <div className="mx-auto flex h-full w-screen max-w-[1440px] flex-col justify-center px-4 py-20 lg:h-screen lg:pl-[142px] lg:pr-[137px]">
         <h2 className="text-40 mb-8 flex gap-2 font-bold">
           <span className="text-background-orange">{caseNumber}</span>
           {header}
         </h2>
-        <div className="flex w-full gap-10">
+        <div className="flex w-full flex-col gap-10 lg:flex-row">
           <Image
             src={image.image}
             alt={image.alt}
@@ -46,13 +46,19 @@ const CaseWhiteBg: FC<CaseProps> = ({
               {preamble}
             </h3>
             <p className="text-14 mb-8 font-medium">{description}</p>
-            <ul className="text-background-white flex flex-wrap gap-4">
+            <ul className="text-background-white flex w-full flex-wrap gap-4">
               {categories.map((category) => {
                 const IconComponent =
                   categoryIconMap[category.title.toLowerCase()] || null;
                 return (
                   <li key={category._id} className="flex items-center gap-2">
-                    {IconComponent && <IconComponent className="text-yellow" />}
+                    {IconComponent && (
+                      <IconComponent
+                        className="text-yellow"
+                        height={16}
+                        width={16}
+                      />
+                    )}
                     {category.title}
                   </li>
                 );

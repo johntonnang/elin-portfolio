@@ -10,14 +10,14 @@ const TwoColumnTextImage: React.FC<TwoColumnTextImageProps> = ({
 }) => {
   return (
     <section id="about" className="bg-background-white flex h-full w-full">
-      <div className="mx-auto flex h-screen w-screen max-w-[1440px] items-center justify-between px-[137px]">
+      <div className="mx-auto flex h-full w-screen max-w-[1440px] flex-col items-center justify-between px-4 py-20 lg:h-screen lg:flex-row lg:px-[137px]">
         <div className="max-w-[450px]">
           <h2 className="text-48 font-reenie text-background-orange mb-8 max-w-[322px]">
             {header}
           </h2>
           <PortableText value={description} />
         </div>
-        <div className="relative h-full">
+        <div className="relative h-full w-full lg:w-auto">
           <Image
             src={image.image}
             alt={image.alt}
@@ -25,10 +25,10 @@ const TwoColumnTextImage: React.FC<TwoColumnTextImageProps> = ({
             height="0"
             sizes="100vw"
             quality={100}
-            className="h-full w-auto object-cover"
+            className="h-auto w-full object-cover lg:h-full lg:w-auto"
           />
           <CanvasDraw className="absolute left-0 top-0 h-full w-full" />
-          <span className="text-32 text-background-orange font-reenie absolute -left-[106px] bottom-28 w-[170px] -rotate-[7deg] text-center">
+          <span className="text-32 text-background-orange font-reenie absolute bottom-28 left-10 w-[170px] -rotate-[7deg] text-center lg:-left-[106px]">
             Click to draw something
           </span>
         </div>

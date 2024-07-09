@@ -27,12 +27,12 @@ const CaseOrangeBg: FC<CaseProps> = ({
 }) => {
   return (
     <section id="projects" className="bg-background-orange flex h-full w-full">
-      <div className="mx-auto flex h-screen w-screen max-w-[1440px] flex-col justify-center pl-[142px] pr-[137px]">
+      <div className="mx-auto flex h-full w-screen max-w-[1440px] flex-col justify-center px-4 py-20 lg:h-screen lg:pl-[142px] lg:pr-[137px]">
         <h2 className="text-40 mb-8 flex gap-2 font-bold">
           <span className="text-yellow">{caseNumber}</span>
           {header}
         </h2>
-        <div className="flex w-full gap-10">
+        <div className="flex w-full flex-col gap-10 lg:flex-row">
           <Image
             src={image.image}
             alt={image.alt}
@@ -56,7 +56,11 @@ const CaseOrangeBg: FC<CaseProps> = ({
                     className="flex items-center gap-2 font-medium"
                   >
                     {IconComponent && (
-                      <IconComponent className="text-background-orange" />
+                      <IconComponent
+                        className="text-background-orange"
+                        height={16}
+                        width={16}
+                      />
                     )}
                     {category.title}
                   </li>
