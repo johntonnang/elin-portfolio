@@ -41,7 +41,7 @@ const CaseOrangeBg: FC<CaseProps> = ({
             sizes="100vw"
             className="h-full w-auto object-cover"
           />
-          <div className="bg-background-white flex flex-col py-10 pl-10 pr-14">
+          <div className="bg-background-white flex w-full max-w-[450px] flex-col py-10 pl-10 pr-14">
             <h3 className="text-background-orange text-14 mb-6 uppercase">
               {preamble}
             </h3>
