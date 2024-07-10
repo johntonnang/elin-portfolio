@@ -17,14 +17,14 @@ const Resume: React.FC<ResumeProps> = ({
 }) => {
   return (
     <section id="resume" className="bg-background-orange flex h-full w-full">
-      <div className="mx-auto flex h-full w-screen max-w-[1440px] flex-col justify-between gap-10 px-4 py-20 lg:h-screen lg:flex-row lg:gap-0 lg:px-[137px] lg:pb-[168px] lg:pt-[185px]">
-        <div className="relative flex h-full w-full flex-col justify-between lg:w-[530px]">
+      <div className="mx-auto flex h-full w-screen max-w-[1440px] flex-col justify-between gap-10 px-4 py-20 xl:h-screen xl:flex-row xl:gap-0 xl:px-[137px] xl:pb-[168px] xl:pt-[185px]">
+        <div className="relative flex h-full w-full flex-col justify-between xl:w-[530px]">
           <div>
             <h2 className="text-24 text-yellow mb-4 font-bold">Experience</h2>
             <ul className="flex flex-col gap-10">
               {experience.map((exp, index) => (
                 <li key={exp._id}>
-                  <h4 className="text-16 lg:text-32 flex items-center gap-4 font-bold">
+                  <h4 className="text-16 xl:text-32 flex items-center gap-4 font-bold">
                     {exp.role}{' '}
                     {React.createElement(
                       experienceIconMapping[
@@ -46,7 +46,7 @@ const Resume: React.FC<ResumeProps> = ({
               ))}
             </ul>
           </div>
-          <div className="hidden items-center gap-4 lg:flex">
+          <div className="hidden items-center gap-4 xl:flex">
             <StarIcon className="text-yellow" width={16} height={16} />
             <Link
               href={resumeFile.asset.url}
@@ -58,12 +58,12 @@ const Resume: React.FC<ResumeProps> = ({
             </Link>
           </div>
         </div>
-        <div className="flex h-full w-full flex-col justify-end lg:w-96">
+        <div className="flex h-full w-full flex-col justify-end xl:w-96">
           <h3 className="text-24 text-yellow mb-4 font-bold">Education</h3>
           <ul>
             {education.map((edu, index) => (
               <li key={edu._id} className="mb-10">
-                <h4 className="text-16 lg:text-32 flex items-center gap-4 font-bold">
+                <h4 className="text-16 xl:text-32 flex items-center gap-4 font-bold">
                   {edu.school}{' '}
                   {React.createElement(
                     educationIconMapping[index % educationIconMapping.length],
@@ -85,11 +85,11 @@ const Resume: React.FC<ResumeProps> = ({
           <ul>
             {achievements.map((ach) => (
               <li key={ach._id}>
-                <h4 className="text-16 lg:text-32 flex items-center gap-4 font-bold">
+                <h4 className="text-16 xl:text-32 flex items-center gap-4 font-bold">
                   {ach.achievement}{' '}
                   <SquareIcon className="text-yellow" width={16} height={16} />{' '}
                 </h4>
-                <p className="text-16 lg:text-32 font-bold">{ach.from}</p>
+                <p className="text-16 xl:text-32 font-bold">{ach.from}</p>
                 <p className="text-16 font-medium uppercase tracking-widest">
                   {ach.date}
                 </p>
@@ -97,7 +97,7 @@ const Resume: React.FC<ResumeProps> = ({
             ))}
           </ul>
         </div>
-        <div className="flex items-center gap-4 lg:hidden">
+        <div className="flex items-center gap-4 xl:hidden">
           <StarIcon className="text-yellow" width={16} height={16} />
           <Link
             href={resumeFile.asset.url}
