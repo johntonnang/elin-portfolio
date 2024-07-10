@@ -13,6 +13,7 @@ const config: Config = {
         'background-white': '#FCF2E8',
         dark: '#1E1E1E',
         yellow: '#E6FE74',
+        grey: '#B3B3B3',
       },
       fontFamily: {
         geist: ['var(--font-geist)', 'sans-serif'],
@@ -21,6 +22,7 @@ const config: Config = {
       fontSize: {
         72: '4.5rem',
         48: '3rem',
+        44: '2.75rem',
         40: '2.5rem',
         36: '2.25rem',
         32: '2rem',
