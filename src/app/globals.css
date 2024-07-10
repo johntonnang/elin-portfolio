@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
     @apply font-geist w-full h-full bg-background-white;
   }
@@ -11,4 +15,27 @@
 .canvas-draw-cursor {
   cursor: pointer;
   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><circle cx="4" cy="4" r="3" fill="%23FE6232"/></svg>'), auto;
+}
+
+.dot::after {
+  @apply content-['.'] text-yellow;
+}
+
+/* ANIMATIONS */
+
+@keyframes bounce {
+  0%, 10%, 30%, 50%, 100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-15px);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 3s ease infinite;
+  animation-delay: 3s;
 }
