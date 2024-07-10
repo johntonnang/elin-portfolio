@@ -7,7 +7,7 @@ const Hero: React.FC<HeroProps> = ({ heading, tagline, image, links }) => {
     <section className="bg-background-orange flex h-full w-full">
       <div className="relative mx-auto flex h-full w-screen max-w-[1440px] flex-col items-center justify-between gap-6 px-4 py-20 lg:h-screen lg:flex-row lg:gap-28 lg:pl-16 lg:pr-[137px]">
         <div className="flex w-full flex-col gap-2 lg:gap-6">
-          <h1 className="text-32 font-reenie lg:text-72 text-black">
+          <h1 className="text-48 font-reenie lg:text-72 text-black">
             {heading}
           </h1>
           <p className="text-16 lg:text-24 font-semibold text-black">
@@ -44,7 +44,7 @@ const Hero: React.FC<HeroProps> = ({ heading, tagline, image, links }) => {
             quality={100}
             className="h-auto w-full object-cover lg:h-full lg:w-auto"
           />
-          <p className="text-24 lg:text-32 font-reenie text-yellow absolute bottom-3/4 right-8 w-2/3 text-center tracking-widest lg:-right-28 lg:bottom-[276px]">
+          <p className="text-24 lg:text-32 font-reenie text-yellow absolute bottom-[80%] right-2 w-2/3 text-center tracking-widest lg:-right-28 lg:bottom-[276px]">
             (Also available for freelance work)
           </p>
         </div>

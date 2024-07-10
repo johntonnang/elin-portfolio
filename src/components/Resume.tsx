@@ -63,7 +63,7 @@ const Resume: React.FC<ResumeProps> = ({
           <ul>
             {education.map((edu, index) => (
               <li key={edu._id} className="mb-10">
-                <h4 className="text-24 lg:text-32 flex items-center gap-4 font-bold">
+                <h4 className="text-16 lg:text-32 flex items-center gap-4 font-bold">
                   {edu.school}{' '}
                   {React.createElement(
                     educationIconMapping[index % educationIconMapping.length],

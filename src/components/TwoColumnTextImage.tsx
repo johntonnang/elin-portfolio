@@ -10,9 +10,9 @@ const TwoColumnTextImage: React.FC<TwoColumnTextImageProps> = ({
 }) => {
   return (
     <section id="about" className="bg-background-white flex h-full w-full">
-      <div className="mx-auto flex h-full w-screen max-w-[1440px] flex-col items-center justify-between px-4 py-20 lg:h-screen lg:flex-row lg:px-[137px]">
+      <div className="mx-auto flex h-full w-screen max-w-[1440px] flex-col items-center justify-between gap-10 px-4 py-20 lg:h-screen lg:flex-row lg:gap-0 lg:px-[137px]">
         <div className="max-w-[450px]">
-          <h2 className="text-48 font-reenie text-background-orange mb-8 max-w-[322px]">
+          <h2 className="text-48 font-reenie text-background-orange mb-4 max-w-[322px] lg:mb-8">
             {header}
           </h2>
           <PortableText value={description} />
