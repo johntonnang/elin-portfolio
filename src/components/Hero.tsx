@@ -65,6 +65,7 @@ const Hero: React.FC<HeroProps> = ({ heading, tagline, image, links }) => {
             height="0"
             sizes="100vw"
             quality={100}
+            priority
             className="h-auto max-h-[450px] w-full object-cover lg:h-full lg:max-h-full lg:w-auto"
           />
           <p className="text-24 lg:text-32 font-reenie text-yellow absolute bottom-[80%] right-2 w-2/3 text-center tracking-widest lg:-right-28 lg:bottom-[276px]">

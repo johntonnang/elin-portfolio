@@ -32,6 +32,7 @@ const CaseHero: React.FC<CaseProps> = ({
           height="0"
           sizes="100vw"
           quality={100}
+          priority
           className="h-auto max-h-[450px] w-full object-cover xl:h-full xl:max-h-full xl:w-auto xl:max-w-[580px]"
         />
         <div className="flex w-full flex-col gap-2 xl:gap-6">
