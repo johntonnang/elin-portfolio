@@ -100,6 +100,53 @@ const resumeType = `
   }
 `;
 
+const caseHeroType = `
+  _type,
+  header,
+  description,
+  image {
+    "image": asset->url,
+    alt,
+    hotspot,
+  },
+  categories[]-> {
+    _id,
+    title,
+  }
+`;
+
+const caseDescriptionLeftType = `
+  _type,
+  header,
+  description,
+  image {
+    "image": asset->url,
+    alt,
+    hotspot,
+  },
+`;
+
+const caseDescriptionRightType = `
+  _type,
+  header,
+  description,
+  image {
+    "image": asset->url,
+    alt,
+    hotspot,
+  },
+`;
+
+const illustrationType = `
+  _type,
+  description,
+  image {
+    "image": asset->url,
+    alt,
+    hotspot,
+  }
+`;
+
 export async function getAllPages() {
   return await client.fetch(groq`*[_type == "page"]{ _id, title, slug }`);
 }
@@ -127,8 +174,66 @@ export async function getStartPageData() {
           _type == "resume" => {
             ${resumeType}
           },
+          _type == "caseHero" => {
+            ${caseHeroType}
+          },
+          _type == "caseDescriptionLeft" => {
+            ${caseDescriptionLeftType}
+          },
+          _type == "caseDescriptionRight" => {
+            ${caseDescriptionRightType}
+          },
+          _type == "illustration" => {
+            ${illustrationType}
+          },
         }
       }`
+    );
+  } catch (error) {
+    console.error('Error when fetching start page data.', error);
+    return null;
+  }
+}
+
+export async function getPageData(slug: string) {
+  try {
+    return await client.fetch(
+      groq`*[_type == "page" && slug.current == $slug][0]{
+        _id,
+        title,
+        slug,
+        pageBuilder[]{
+          ...,
+          _type == "hero" => {
+            ${heroType}
+          },
+          _type == "twoColumnTextImage" => {
+            ${twoColumnTextImageType}
+          },
+          _type == "caseWhiteBg" => {
+            ${caseWhiteBgType}
+          },
+          _type == "caseOrangeBg" => {
+            ${caseOrangeBgType}
+          },
+          _type == "resume" => {
+            ${resumeType}
+          },
+          _type == "caseHero" => {
+            ${caseHeroType}
+          },
+          _type == "caseDescriptionLeft" => {
+            ${caseDescriptionLeftType}
+          },
+          _type == "caseDescriptionRight" => {
+            ${caseDescriptionRightType}
+          },
+          _type == "illustration" => {
+            ${illustrationType}
+          },
+        }
+      }`,
+      { slug }
     );
   } catch (error) {
     console.error('Error when fetching start page data.', error);
