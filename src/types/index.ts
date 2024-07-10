@@ -96,11 +96,21 @@ export interface TwoColumnTextImageProps extends BaseProps {
   };
 }
 
+export interface IllustrationProps extends BaseProps {
+  _type: 'illustration';
+  description: string;
+  image: {
+    image: string;
+    alt: string;
+  };
+}
+
 export type ComponentProps =
   | HeroProps
   | CaseProps
   | ResumeProps
-  | TwoColumnTextImageProps;
+  | TwoColumnTextImageProps
+  | IllustrationProps;
 
 export type ComponentMap = {
   [key: string]: FC<ComponentProps>;
@@ -110,4 +120,16 @@ export type PageData = {
   _id: string;
   title: string;
   pageBuilder: ComponentProps[];
+};
+
+export type PageProps = {
+  slug?: {
+    current: string;
+  };
+};
+
+export type ParamsProps = {
+  params: {
+    slug: string;
+  };
 };
