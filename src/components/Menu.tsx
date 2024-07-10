@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { MenuProps } from '~types/index';
 import CustomLink from './CustomLink';
 import CircleIcon from 'public/svg/circle.svg';
@@ -9,11 +9,23 @@ import Link from 'next/link';
 const Menu: React.FC<MenuProps> = ({ title, links }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+  }, [isMenuOpen]);
+
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
 
   const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (isMenuOpen) {
+      setMenuOpen(false);
+    }
+
     e.preventDefault();
     window.scrollTo({
       top: 0,
