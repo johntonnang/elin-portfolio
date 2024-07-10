@@ -1,3 +1,5 @@
+'use client';
+
 import { HeroProps } from '~types/index';
 import Image from 'next/image';
 import CustomLink from './CustomLink';
@@ -17,6 +19,13 @@ const highlightWords = (text: string, wordsToHighlight: string[]) => {
 };
 
 const Hero: React.FC<HeroProps> = ({ heading, tagline, image, links }) => {
+  const scrollDown = () => {
+    const projects = document.getElementById('projects');
+    if (projects) {
+      projects.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="bg-background-orange flex h-full w-full">
       <div className="relative mx-auto flex h-full w-screen max-w-[1440px] flex-col items-center justify-between gap-6 px-4 py-20 lg:h-screen lg:flex-row lg:gap-28 lg:py-0 lg:pl-16 lg:pr-[137px]">
@@ -61,11 +70,13 @@ const Hero: React.FC<HeroProps> = ({ heading, tagline, image, links }) => {
           <p className="text-24 lg:text-32 font-reenie text-yellow absolute bottom-[80%] right-2 w-2/3 text-center tracking-widest lg:-right-28 lg:bottom-[276px]">
             (Also available for freelance work)
           </p>
-          <ArrowIcon
-            className="text-yellow absolute bottom-9 right-1/2 hidden animate-bounce lg:block"
-            width={40}
-            height={40}
-          />
+          <button onClick={scrollDown}>
+            <ArrowIcon
+              className="text-yellow absolute bottom-9 right-1/2 hidden animate-bounce lg:block"
+              width={40}
+              height={40}
+            />
+          </button>
         </div>
       </div>
     </section>

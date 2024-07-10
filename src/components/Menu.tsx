@@ -40,7 +40,7 @@ const Menu: React.FC<MenuProps> = ({ title, links }) => {
         <Link
           href="/"
           className="flex items-center gap-10"
-          onClick={handleHomeClick}
+          // onClick={handleHomeClick}
         >
           <CircleIcon className="text-yellow" width={24} height={24} />
           <span className="lg:text-24 hidden font-bold lg:block">{title}</span>

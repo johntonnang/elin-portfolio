@@ -14,7 +14,7 @@ const CustomLink: React.FC<LinkProps> = ({ link, onClick }) => {
   switch (link.linkType) {
     case 'internal':
       href = link.elementId
-        ? `#${link.elementId.current}`
+        ? `/#${link.elementId.current}`
         : `/${link.pageReference?.slug?.current}`;
       ariaLabel = `Navigate to ${link.title}`;
       break;
