@@ -10,7 +10,7 @@ const TwoColumnTextImage: React.FC<TwoColumnTextImageProps> = ({
 }) => {
   return (
     <section id="about" className="bg-background-white flex h-full w-full">
-      <div className="mx-auto flex h-full w-screen max-w-[1440px] flex-col items-center justify-between gap-10 px-4 py-20 xl:h-screen xl:flex-row xl:gap-0 xl:px-[137px] xl:py-0">
+      <div className="mx-auto flex h-full w-screen max-w-[1440px] flex-col items-center justify-between gap-10 px-4 py-20 xl:h-screen xl:flex-row xl:px-[137px] xl:py-0">
         <div className="xl:max-w-[450px]">
           <h2 className="text-48 font-reenie text-background-orange mb-4 max-w-[322px] xl:mb-8">
             {header}
