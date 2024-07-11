@@ -21,27 +21,10 @@ const Menu: React.FC<MenuProps> = ({ title, links }) => {
     setMenuOpen(!isMenuOpen);
   };
 
-  const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (isMenuOpen) {
-      setMenuOpen(false);
-    }
-
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-    history.replaceState(null, '', '/');
-  };
-
   return (
-    <>
+    <header>
       <nav className="bg-background-orange fixed left-0 top-0 z-30 flex h-16 w-full max-w-[1440px] items-center justify-between px-4 py-4 lg:fixed lg:left-1/2 lg:h-24 lg:-translate-x-1/2 lg:bg-transparent lg:pl-16 lg:pr-[68px]">
-        <Link
-          href="/"
-          className="flex items-center gap-10"
-          // onClick={handleHomeClick}
-        >
+        <Link href="/" className="flex items-center gap-10">
           <CircleIcon className="text-yellow" width={24} height={24} />
           <span className="lg:text-24 hidden font-bold lg:block">{title}</span>
         </Link>
@@ -80,7 +63,7 @@ const Menu: React.FC<MenuProps> = ({ title, links }) => {
             ))}
         </ul>
       </div>
-    </>
+    </header>
   );
 };
 
