@@ -1,0 +1,19 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /user/
+Disallow: /temp/
+Disallow: /private/
+Disallow: /secret/
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.zip$
+
+# Host
+Host: https://www.elin.cool
+
+# Sitemaps
+Sitemap: https://www.elin.cool/sitemap.xml
