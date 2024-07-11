@@ -25,7 +25,7 @@ const CaseHero: React.FC<CaseProps> = ({
   return (
     <div className="bg-background-orange mb-[60px] flex h-full w-full">
       <div className="relative mx-auto flex h-full w-screen max-w-[1440px] flex-col-reverse items-center justify-between gap-6 px-4 py-20 xl:h-screen xl:flex-row xl:gap-40 xl:pb-10 xl:pl-16 xl:pr-[137px]">
-        <div className="h-auto max-h-[450px] w-full xl:h-full xl:max-h-full xl:w-auto xl:max-w-[580px]">
+        <div className="h-auto max-h-[450px] w-full xl:h-full xl:max-h-full xl:w-full xl:max-w-[580px]">
           <Image
             src={image.image}
             alt={image.alt}
