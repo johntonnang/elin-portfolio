@@ -28,8 +28,8 @@ const Hero: React.FC<HeroProps> = ({ heading, tagline, image, links }) => {
 
   return (
     <section className="bg-background-orange flex h-full w-full">
-      <div className="relative mx-auto flex h-full w-screen max-w-[1440px] flex-col items-center justify-between gap-6 px-4 py-20 lg:h-screen lg:flex-row lg:gap-28 lg:py-0 lg:pl-16 lg:pr-[137px]">
-        <div className="flex w-full flex-col gap-2 lg:gap-6">
+      <div className="relative mx-auto flex h-full w-screen max-w-[1440px] flex-col items-center justify-between gap-10 px-4 pb-28 pt-[88px] lg:h-screen lg:flex-row lg:gap-28 lg:py-0 lg:pl-16 lg:pr-[137px]">
+        <div className="flex w-full flex-col gap-6">
           <h1 className="text-48 font-reenie lg:text-72 text-black">
             {heading}
           </h1>
@@ -37,7 +37,7 @@ const Hero: React.FC<HeroProps> = ({ heading, tagline, image, links }) => {
             {highlightWords(tagline, ['creative', 'human'])}
           </p>
         </div>
-        <ul className="absolute bottom-8 left-4 m-0 flex list-none flex-row items-center justify-center gap-4 lg:bottom-16 lg:left-16">
+        <ul className="absolute bottom-10 right-4 m-0 flex list-none flex-row items-center justify-center gap-4 lg:bottom-16 lg:left-16 lg:right-auto">
           {links &&
             links.map((link, index) => (
               <li key={index}>
@@ -46,15 +46,15 @@ const Hero: React.FC<HeroProps> = ({ heading, tagline, image, links }) => {
             ))}
         </ul>
         <div className="relative h-full max-h-[450px] w-full lg:max-h-full">
-          <div className="absolute bottom-0 right-4 flex lg:-left-12 lg:bottom-12">
-            <div className="flex gap-4 lg:gap-8">
-              <div className="text-48 text-background-white lg:text-yellow flex flex-col font-bold">
-                <span>2</span>
-                <span>2</span>
+          <div className="absolute -bottom-[72px] right-4 flex lg:-left-12 lg:bottom-12">
+            <div className="hidden gap-4 lg:flex lg:gap-8">
+              <div className="text-48 flex flex-col font-bold">
+                <span className="text-background-white lg:text-yellow">2</span>
+                <span className="text-yellow">2</span>
               </div>
-              <div className="text-yellow lg:text-background-white text-48 flex flex-col font-bold">
-                <span>0</span>
-                <span>4</span>
+              <div className="text-48 text-background-white flex flex-col font-bold">
+                <span className="text-background-white">0</span>
+                <span className="text-yellow lg:text-background-white">4</span>
               </div>
             </div>
           </div>
@@ -68,7 +68,7 @@ const Hero: React.FC<HeroProps> = ({ heading, tagline, image, links }) => {
             priority
             className="h-auto max-h-[450px] w-full object-cover lg:h-full lg:max-h-full lg:w-auto"
           />
-          <p className="text-24 lg:text-32 font-reenie text-yellow absolute bottom-[80%] left-2 w-2/3 text-center tracking-widest lg:-right-28 lg:bottom-[276px]">
+          <p className="text-24 lg:text-32 font-reenie text-yellow absolute bottom-24 left-0 w-2/3 text-center tracking-widest lg:-right-28 lg:bottom-[276px] lg:left-auto">
             (Also available for freelance work)
           </p>
           <button onClick={scrollDown} aria-label="Scroll down to projects">
