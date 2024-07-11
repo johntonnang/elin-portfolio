@@ -23,7 +23,7 @@ const Resume: React.FC<ResumeProps> = ({
             <h2 className="text-24 text-yellow mb-4 font-bold">Experience</h2>
             <ul className="flex flex-col gap-10">
               {experience.map((exp, index) => (
-                <li key={exp._id}>
+                <li key={`${exp._id}-${index}`}>
                   <h4 className="text-16 xl:text-32 flex items-center gap-4 font-bold">
                     {exp.role}{' '}
                     {React.createElement(
@@ -62,7 +62,7 @@ const Resume: React.FC<ResumeProps> = ({
           <h3 className="text-24 text-yellow mb-4 font-bold">Education</h3>
           <ul>
             {education.map((edu, index) => (
-              <li key={edu._id} className="mb-10">
+              <li key={`${edu._id}-${index}`} className="mb-10">
                 <h4 className="text-16 xl:text-32 flex items-center gap-4 font-bold">
                   {edu.school}{' '}
                   {React.createElement(
@@ -83,8 +83,8 @@ const Resume: React.FC<ResumeProps> = ({
           </ul>
           <h3 className="text-24 text-yellow mb-4 font-bold">Achievements</h3>
           <ul>
-            {achievements.map((ach) => (
-              <li key={ach._id}>
+            {achievements.map((ach, index) => (
+              <li key={`${ach._id}-${index}`}>
                 <h4 className="text-16 xl:text-32 flex items-center gap-4 font-bold">
                   {ach.achievement}{' '}
                   <SquareIcon className="text-yellow" width={16} height={16} />{' '}
