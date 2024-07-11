@@ -18,6 +18,7 @@ const categoryIconMap: {
 };
 
 const CaseOrangeBg: React.FC<CaseProps> = ({
+  wip,
   caseNumber,
   header,
   preamble,
@@ -34,7 +35,10 @@ const CaseOrangeBg: React.FC<CaseProps> = ({
   return (
     <section id="projects" className="bg-background-orange flex h-full w-full">
       <div className="mx-auto flex h-full w-screen max-w-[1440px] flex-col justify-center px-4 py-20 lg:pl-[142px] lg:pr-[137px] xl:h-screen xl:py-0">
-        <Link className="w-fit" href={`/${slug}`}>
+        <Link
+          className={`w-fit cursor-pointer ${wip ? 'pointer-events-none cursor-default' : ''}`}
+          href={`/${slug}`}
+        >
           <h2 className="text-40 mb-8 flex gap-2 font-bold">
             <span className="text-yellow">{caseNumber}</span>
             {header}
@@ -42,7 +46,7 @@ const CaseOrangeBg: React.FC<CaseProps> = ({
         </Link>
         <Link
           href={`/${slug}`}
-          className="flex w-full flex-col gap-10 xl:flex-row"
+          className={`flex w-full cursor-pointer flex-col gap-10 xl:flex-row ${wip ? 'pointer-events-none cursor-default' : ''}`}
         >
           <Image
             src={image.image}
@@ -57,7 +61,7 @@ const CaseOrangeBg: React.FC<CaseProps> = ({
               {preamble}
             </h3>
             <p className="text-14 mb-8 font-medium">{description}</p>
-            <ul className="flex flex-wrap gap-4">
+            <ul className="m-0 flex list-none flex-row flex-wrap gap-4">
               {categories.map((category) => {
                 const IconComponent =
                   categoryIconMap[category.title.toLowerCase()] || null;
@@ -78,6 +82,13 @@ const CaseOrangeBg: React.FC<CaseProps> = ({
                 );
               })}
             </ul>
+            {wip && (
+              <div className="bg-yellow absolute -right-14 top-3 flex h-6 w-40 rotate-45 items-center justify-center">
+                <span className="text-background-orange text-14 font-bold">
+                  WIP
+                </span>
+              </div>
+            )}
           </div>
         </Link>
       </div>

@@ -21,7 +21,7 @@ const Resume: React.FC<ResumeProps> = ({
         <div className="relative flex h-full w-full flex-col justify-between xl:w-[530px]">
           <div>
             <h2 className="text-24 text-yellow mb-4 font-bold">Experience</h2>
-            <ul className="flex flex-col gap-10">
+            <ul className="m-0 flex list-none flex-col gap-10">
               {experience.map((exp, index) => (
                 <li key={`${exp._id}-${index}`}>
                   <h4 className="text-16 xl:text-32 flex items-center gap-4 font-bold">
@@ -60,7 +60,7 @@ const Resume: React.FC<ResumeProps> = ({
         </div>
         <div className="flex h-full w-full flex-col justify-end xl:w-96">
           <h3 className="text-24 text-yellow mb-4 font-bold">Education</h3>
-          <ul>
+          <ul className="m-0 flex list-none flex-row">
             {education.map((edu, index) => (
               <li key={`${edu._id}-${index}`} className="mb-10">
                 <h4 className="text-16 xl:text-32 flex items-center gap-4 font-bold">
@@ -82,7 +82,7 @@ const Resume: React.FC<ResumeProps> = ({
             ))}
           </ul>
           <h3 className="text-24 text-yellow mb-4 font-bold">Achievements</h3>
-          <ul>
+          <ul className="m-0 flex list-none flex-row">
             {achievements.map((ach, index) => (
               <li key={`${ach._id}-${index}`}>
                 <h4 className="text-16 xl:text-32 flex items-center gap-4 font-bold">

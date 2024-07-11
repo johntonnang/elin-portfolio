@@ -10,6 +10,14 @@
   body {
     @apply font-geist w-full h-full bg-background-white;
   }
+
+  p {
+    @apply text-16 font-medium;
+  }
+
+  ul {
+    @apply list-disc ml-4 gap-7 flex flex-col;
+  }
 }
 
 .canvas-draw-cursor {

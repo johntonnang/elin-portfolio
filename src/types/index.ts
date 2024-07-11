@@ -31,6 +31,7 @@ export interface HeroProps extends BaseProps {
 
 export interface CaseProps extends BaseProps {
   _type: 'caseWhiteBg' | 'caseOrangeBg';
+  wip: boolean;
   caseNumber: string;
   header: string;
   preamble: string;
@@ -96,6 +97,16 @@ export interface TwoColumnTextImageProps extends BaseProps {
   };
 }
 
+export interface CaseDescription extends BaseProps {
+  _type: 'caseDescriptionLeft' | 'caseDescriptionRight';
+  header: string;
+  description: PortableTextBlock[];
+  image: {
+    image: string;
+    alt: string;
+  };
+}
+
 export interface IllustrationProps extends BaseProps {
   _type: 'illustration';
   description: string;
@@ -110,6 +121,7 @@ export type ComponentProps =
   | CaseProps
   | ResumeProps
   | TwoColumnTextImageProps
+  | CaseDescription
   | IllustrationProps;
 
 export type ComponentMap = {

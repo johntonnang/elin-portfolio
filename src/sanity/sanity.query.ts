@@ -39,6 +39,7 @@ const twoColumnTextImageType = `
 
 const caseWhiteBgType = `
   _type,
+  wip,
   caseNumber,
   header,
   preamble,
@@ -56,6 +57,7 @@ const caseWhiteBgType = `
 
 const caseOrangeBgType = `
   _type,
+  wip,
   caseNumber,
   header,
   preamble,

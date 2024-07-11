@@ -37,7 +37,7 @@ const Hero: React.FC<HeroProps> = ({ heading, tagline, image, links }) => {
             {highlightWords(tagline, ['creative', 'human'])}
           </p>
         </div>
-        <ul className="absolute bottom-8 left-8 flex items-center justify-center gap-4 lg:bottom-16 lg:left-16">
+        <ul className="absolute bottom-8 left-8 m-0 flex list-none flex-row items-center justify-center gap-4 lg:bottom-16 lg:left-16">
           {links &&
             links.map((link, index) => (
               <li key={index}>

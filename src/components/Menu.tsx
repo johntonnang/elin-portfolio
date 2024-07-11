@@ -28,7 +28,7 @@ const Menu: React.FC<MenuProps> = ({ title, links }) => {
           <CircleIcon className="text-yellow" width={24} height={24} />
           <span className="lg:text-24 hidden font-bold lg:block">{title}</span>
         </Link>
-        <ul className="text-12 lg:text-24 hidden gap-16 font-medium lg:flex">
+        <ul className="text-12 lg:text-24 m-0 hidden list-none flex-row gap-16 font-medium lg:flex">
           {links &&
             links.map((link, index) => (
               <li key={index}>
@@ -54,7 +54,7 @@ const Menu: React.FC<MenuProps> = ({ title, links }) => {
       <div
         className={`bg-background-orange fixed inset-0 z-20 flex transform flex-col items-center justify-center transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}
       >
-        <ul className="text-24 flex flex-col items-center gap-8 font-medium">
+        <ul className="text-24 m-0 flex list-none flex-col items-center gap-8 font-medium">
           {links &&
             links.map((link, index) => (
               <li key={index}>

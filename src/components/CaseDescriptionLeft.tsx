@@ -1,11 +1,12 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { CaseProps } from '~types/index';
+import { CaseDescription } from '~types/index';
+import { PortableText } from '@portabletext/react';
 import Image from 'next/image';
 import CircleIcon from 'public/svg/circle.svg';
 
-const CaseDescriptionLeft: React.FC<CaseProps> = ({
+const CaseDescriptionLeft: React.FC<CaseDescription> = ({
   header,
   description,
   image,
@@ -24,8 +25,11 @@ const CaseDescriptionLeft: React.FC<CaseProps> = ({
     <div className="bg-background-white flex h-full w-full">
       <div className="relative mx-auto flex h-full w-screen max-w-[1440px] flex-col items-center justify-center gap-[90px] px-4 pb-8 xl:h-full xl:flex-row xl:px-[137px]">
         <div className="flex h-full w-full flex-col">
-          <div ref={descRef} className="flex h-full w-full items-center">
-            <p className="text-16 font-medium">{description}</p>
+          <div
+            ref={descRef}
+            className="flex h-full w-full flex-col items-center gap-7"
+          >
+            <PortableText value={description} />
           </div>
         </div>
         <div className="relative flex h-full flex-col items-center gap-8">
