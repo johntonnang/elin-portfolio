@@ -16,15 +16,17 @@ const Illustration: FC<IllustrationProps> = ({ description, image }) => {
     <div className="bg-background-orange relative mb-[138px] flex h-full flex-col items-center justify-center">
       <div className="mx-auto flex h-full w-full max-w-[1440px] flex-col items-center justify-center gap-6 p-16">
         {image && (
-          <Image
-            src={image.image}
-            alt={image.alt}
-            width="0"
-            height="0"
-            sizes="100vw"
-            quality={100}
-            className="h-auto w-full object-cover"
-          />
+          <div className="h-full w-full">
+            <Image
+              src={image.image}
+              alt={image.alt}
+              width="0"
+              height="0"
+              sizes="100vw"
+              quality={100}
+              className="h-auto w-full object-cover"
+            />
+          </div>
         )}
         {description && <p className="text-16 font-semibold">{description}</p>}
       </div>
