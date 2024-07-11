@@ -24,7 +24,7 @@ const Resume: React.FC<ResumeProps> = ({
             <ul className="m-0 flex list-none flex-col gap-10">
               {experience.map((exp, index) => (
                 <li key={`${exp._id}-${index}`}>
-                  <h4 className="text-16 xl:text-32 flex items-center gap-4 font-bold">
+                  <h3 className="text-16 xl:text-32 flex items-center gap-4 font-bold">
                     {exp.role}{' '}
                     {React.createElement(
                       experienceIconMapping[
@@ -37,7 +37,7 @@ const Resume: React.FC<ResumeProps> = ({
                       }
                     )}
                     {exp.company}
-                  </h4>
+                  </h3>
                   <p className="text-16 mb-4 font-medium uppercase tracking-widest">
                     {exp.date}
                   </p>
@@ -63,7 +63,7 @@ const Resume: React.FC<ResumeProps> = ({
           <ul className="m-0 flex list-none flex-row">
             {education.map((edu, index) => (
               <li key={`${edu._id}-${index}`} className="mb-10">
-                <h4 className="text-16 xl:text-32 flex items-center gap-4 font-bold">
+                <h3 className="text-16 xl:text-32 flex items-center gap-4 font-bold">
                   {edu.school}{' '}
                   {React.createElement(
                     educationIconMapping[index % educationIconMapping.length],
@@ -74,7 +74,7 @@ const Resume: React.FC<ResumeProps> = ({
                     }
                   )}
                   {edu.degree}
-                </h4>
+                </h3>
                 <p className="text-16 font-medium uppercase tracking-widest">
                   {edu.date}
                 </p>
@@ -85,10 +85,10 @@ const Resume: React.FC<ResumeProps> = ({
           <ul className="m-0 flex list-none flex-row">
             {achievements.map((ach, index) => (
               <li key={`${ach._id}-${index}`}>
-                <h4 className="text-16 xl:text-32 flex items-center gap-4 font-bold">
+                <h3 className="text-16 xl:text-32 flex items-center gap-4 font-bold">
                   {ach.achievement}{' '}
                   <SquareIcon className="text-yellow" width={16} height={16} />{' '}
-                </h4>
+                </h3>
                 <p className="text-16 xl:text-32 font-bold">{ach.from}</p>
                 <p className="text-16 font-medium uppercase tracking-widest">
                   {ach.date}
