@@ -75,7 +75,7 @@ const CaseDescriptionLeft: React.FC<CaseDescription> = ({
             {header}
           </h1>
         </div>
-        <div className="hidden w-full xl:block">
+        <div ref={descRef} className="hidden w-full xl:block">
           {image && (
             <Image
               src={image.image}

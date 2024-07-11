@@ -37,7 +37,7 @@ const CaseDescriptionRight: React.FC<CaseDescription> = ({
   return (
     <div className="bg-background-white flex h-full w-full">
       <div className="relative mx-auto flex h-full w-screen max-w-[1440px] items-center justify-center gap-6 px-4 pb-8 xl:h-full xl:gap-[90px] xl:px-[137px]">
-        <div className="hidden w-full xl:block">
+        <div ref={descRef} className="hidden w-full xl:block">
           {image && (
             <Image
               src={image.image}
