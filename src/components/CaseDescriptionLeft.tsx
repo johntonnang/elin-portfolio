@@ -50,7 +50,7 @@ const CaseDescriptionLeft: React.FC<CaseDescription> = ({
                 height="0"
                 sizes="100vw"
                 quality={100}
-                className="h-auto max-h-[450px] w-full object-cover xl:h-full xl:max-h-full xl:w-full xl:max-w-[580px]"
+                className="h-auto max-h-[450px] w-full object-contain xl:h-full xl:max-h-full xl:w-full xl:max-w-[580px]"
                 onLoad={handleImageLoad}
               />
             )}
@@ -75,7 +75,7 @@ const CaseDescriptionLeft: React.FC<CaseDescription> = ({
             {header}
           </h1>
         </div>
-        <div ref={descRef} className="hidden w-full xl:block">
+        <div className="hidden w-full xl:block">
           {image && (
             <Image
               src={image.image}
@@ -84,7 +84,7 @@ const CaseDescriptionLeft: React.FC<CaseDescription> = ({
               height="0"
               sizes="100vw"
               quality={100}
-              className="h-auto max-h-[450px] w-full object-cover xl:h-full xl:max-h-full xl:w-full xl:max-w-[580px]"
+              className="h-auto max-h-[450px] w-full object-contain xl:h-full xl:w-full xl:max-w-[580px]"
               onLoad={handleImageLoad}
             />
           )}
