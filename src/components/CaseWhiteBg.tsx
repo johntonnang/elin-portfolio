@@ -56,12 +56,12 @@ const CaseWhiteBg: React.FC<CaseProps> = ({
             sizes="100vw"
             className="h-full max-h-[350px] w-full object-cover xl:max-h-full xl:max-w-[676px]"
           />
-          <div className="bg-background-orange relative flex w-full flex-col overflow-hidden py-10 pl-10 pr-14 xl:max-w-[450px] xl:pb-0 xl:pt-10">
+          <div className="bg-background-orange relative flex w-full flex-col overflow-hidden p-10 xl:max-w-[450px] xl:pb-0 xl:pr-14 xl:pt-10">
             <h3 className="text-background-white text-14 mb-6 uppercase">
               {preamble}
             </h3>
             <p className="text-14 mb-8 font-medium">{description}</p>
-            <ul className="text-background-white gap- m-0 flex w-full list-none flex-row flex-wrap">
+            <ul className="text-background-white m-0 flex w-full list-none flex-row flex-wrap gap-4">
               {categories.map((category) => {
                 const IconComponent =
                   categoryIconMap[category.title.toLowerCase()] || null;

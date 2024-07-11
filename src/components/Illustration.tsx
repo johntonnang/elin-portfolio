@@ -13,8 +13,8 @@ interface IllustrationProps {
 
 const Illustration: FC<IllustrationProps> = ({ description, image }) => {
   return (
-    <div className="bg-background-orange relative mb-[138px] flex h-full flex-col items-center justify-center">
-      <div className="mx-auto flex h-full w-full max-w-[1440px] flex-col items-center justify-center gap-6 p-16">
+    <div className="bg-background-orange relative mb-[126px] flex h-full flex-col items-center justify-center xl:mb-[138px]">
+      <div className="mx-auto flex h-full w-full max-w-[1440px] flex-col items-center justify-center gap-6 p-4 xl:p-16">
         {image && (
           <div className="h-full w-full">
             <Image
@@ -30,7 +30,7 @@ const Illustration: FC<IllustrationProps> = ({ description, image }) => {
         )}
         {description && <p className="text-16 font-semibold">{description}</p>}
       </div>
-      <span className="bg-grey absolute -bottom-[106px] right-1/2 h-[74px] w-1 translate-x-1/2 after:content-['']" />
+      <span className="bg-grey absolute -bottom-[94px] left-5 h-[62px] w-1 translate-x-1/2 after:content-[''] xl:-bottom-[106px] xl:right-1/2 xl:h-[74px]" />
     </div>
   );
 };

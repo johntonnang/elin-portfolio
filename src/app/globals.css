@@ -12,7 +12,7 @@
   }
 
   p {
-    @apply text-16 font-medium;
+    @apply text-16 font-normal xl:font-medium;
   }
 
   ul {

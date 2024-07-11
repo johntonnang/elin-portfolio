@@ -45,14 +45,14 @@ const Hero: React.FC<HeroProps> = ({ heading, tagline, image, links }) => {
               </li>
             ))}
         </ul>
-        <div className="relative h-full w-full">
-          <div className="absolute bottom-0 left-6 flex lg:-left-12 lg:bottom-12">
-            <div className="flex gap-8">
-              <div className="text-48 text-yellow flex flex-col font-bold">
+        <div className="relative h-full max-h-[450px] w-full lg:max-h-full">
+          <div className="absolute bottom-0 right-4 flex lg:-left-12 lg:bottom-12">
+            <div className="flex gap-4 lg:gap-8">
+              <div className="text-48 text-background-white lg:text-yellow flex flex-col font-bold">
                 <span>2</span>
                 <span>2</span>
               </div>
-              <div className="text-background-white text-48 flex flex-col font-bold">
+              <div className="text-yellow lg:text-background-white text-48 flex flex-col font-bold">
                 <span>0</span>
                 <span>4</span>
               </div>
@@ -68,7 +68,7 @@ const Hero: React.FC<HeroProps> = ({ heading, tagline, image, links }) => {
             priority
             className="h-auto max-h-[450px] w-full object-cover lg:h-full lg:max-h-full lg:w-auto"
           />
-          <p className="text-24 lg:text-32 font-reenie text-yellow absolute bottom-[80%] right-2 w-2/3 text-center tracking-widest lg:-right-28 lg:bottom-[276px]">
+          <p className="text-24 lg:text-32 font-reenie text-yellow absolute bottom-[80%] left-2 w-2/3 text-center tracking-widest lg:-right-28 lg:bottom-[276px]">
             (Also available for freelance work)
           </p>
           <button onClick={scrollDown}>

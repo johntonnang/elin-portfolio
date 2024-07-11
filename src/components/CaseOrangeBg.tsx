@@ -56,7 +56,7 @@ const CaseOrangeBg: React.FC<CaseProps> = ({
             sizes="100vw"
             className="h-full max-h-[350px] w-full object-cover xl:max-h-full xl:max-w-[676px]"
           />
-          <div className="bg-background-white flex w-full flex-col py-10 pl-10 pr-14 xl:max-w-[450px] xl:pb-0 xl:pt-10">
+          <div className="bg-background-white flex w-full flex-col p-10 xl:max-w-[450px] xl:pb-0 xl:pr-14 xl:pt-10">
             <h3 className="text-background-orange text-14 mb-6 uppercase">
               {preamble}
             </h3>
