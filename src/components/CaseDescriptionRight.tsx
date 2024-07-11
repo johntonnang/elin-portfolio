@@ -57,7 +57,12 @@ const CaseDescriptionRight: React.FC<CaseDescription> = ({
             width={16}
             height={16}
           />
-          <span className="bg-grey w-1" style={{ height: `${lineHeight}px` }} />
+          {image || description ? (
+            <span
+              className="bg-grey w-1"
+              style={{ height: `${lineHeight}px` }}
+            />
+          ) : null}
           <h1 className="text-24 absolute -top-2 left-10 flex whitespace-nowrap font-medium xl:left-12">
             {header}
           </h1>
@@ -80,10 +85,7 @@ const CaseDescriptionRight: React.FC<CaseDescription> = ({
               />
             )}
           </div>
-          <div
-            // ref={descRef}
-            className="flex h-full w-full flex-col items-center gap-10"
-          >
+          <div className="flex h-full w-full flex-col items-center gap-10">
             <PortableText value={description} />
           </div>
         </div>

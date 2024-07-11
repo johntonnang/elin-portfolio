@@ -38,6 +38,7 @@ const Menu: React.FC<MenuProps> = ({ title, links }) => {
         </ul>
         <div className="flex items-center lg:hidden">
           <button
+            aria-label="Open hamburger menu"
             onClick={toggleMenu}
             className="relative z-30 flex flex-col gap-2"
           >

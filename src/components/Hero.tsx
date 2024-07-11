@@ -71,7 +71,7 @@ const Hero: React.FC<HeroProps> = ({ heading, tagline, image, links }) => {
           <p className="text-24 lg:text-32 font-reenie text-yellow absolute bottom-[80%] left-2 w-2/3 text-center tracking-widest lg:-right-28 lg:bottom-[276px]">
             (Also available for freelance work)
           </p>
-          <button onClick={scrollDown}>
+          <button onClick={scrollDown} aria-label="Scroll down to projects">
             <ArrowIcon
               className="text-yellow absolute bottom-9 right-1/2 hidden animate-bounce lg:block"
               width={40}

@@ -65,8 +65,13 @@ const CaseDescriptionLeft: React.FC<CaseDescription> = ({
             width={16}
             height={16}
           />
-          <span className="bg-grey w-1" style={{ height: `${lineHeight}px` }} />
-          <h1 className="text-24 absolute -top-2 left-10 flex whitespace-nowrap font-medium xl:right-12">
+          {image || description ? (
+            <span
+              className="bg-grey w-1"
+              style={{ height: `${lineHeight}px` }}
+            />
+          ) : null}
+          <h1 className="text-24 absolute -top-2 left-10 whitespace-nowrap font-medium xl:left-auto xl:right-12">
             {header}
           </h1>
         </div>
