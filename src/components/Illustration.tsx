@@ -30,7 +30,7 @@ const Illustration: FC<IllustrationProps> = ({ description, image }) => {
         )}
         {description && <p className="text-16 font-semibold">{description}</p>}
       </div>
-      <span className="bg-grey absolute -bottom-[94px] left-5 h-[62px] w-1 translate-x-1/2 after:content-[''] xl:-bottom-[106px] xl:right-1/2 xl:h-[74px]" />
+      <span className="bg-grey absolute -bottom-[94px] left-5 h-[62px] w-1 translate-x-1/2 after:content-[''] xl:-bottom-[106px] xl:left-auto xl:right-1/2 xl:h-[74px]" />
     </div>
   );
 };
