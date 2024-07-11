@@ -43,7 +43,13 @@ const CustomLink: React.FC<LinkProps> = ({ link, onClick }) => {
       onClick={onClick}
     >
       {link.icon ? (
-        <Image src={link.icon.url} alt={link.title} width={32} height={32} />
+        <Image
+          src={link.icon.url}
+          alt={link.title}
+          width={32}
+          height={32}
+          className="h-auto w-auto"
+        />
       ) : (
         link.title
       )}
