@@ -27,7 +27,10 @@ const CaseOrangeBg: React.FC<CaseProps> = ({
   categories,
 }) => {
   const createSlug = (header: string) => {
-    return header.toLowerCase().replace(/\s+/g, '-');
+    return header
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, '')
+      .replace(/\s+/g, '-');
   };
 
   const slug = createSlug(header);
