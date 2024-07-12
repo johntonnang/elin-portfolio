@@ -7,8 +7,8 @@ import Menu from '~components/Menu';
 import Footer from '~components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Elin Deninger | Portfolio',
-  description: 'Portfolio for Elin Deninger',
+  title: 'Elin Deninger',
+  description: 'Elin Deninger | Portfolio',
 };
 
 export default async function RootLayout({
