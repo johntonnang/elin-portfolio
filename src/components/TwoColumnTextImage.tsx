@@ -25,6 +25,7 @@ const TwoColumnTextImage: React.FC<TwoColumnTextImageProps> = ({
             height="0"
             sizes="100vw"
             quality={100}
+            priority
             className="h-auto max-h-[600px] w-full object-cover xl:h-full xl:max-h-full xl:w-auto"
           />
           <CanvasDraw className="absolute left-0 top-0 h-full w-full" />
