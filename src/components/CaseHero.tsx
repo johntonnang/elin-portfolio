@@ -23,7 +23,7 @@ const CaseHero: React.FC<CaseProps> = ({
   categories,
 }) => {
   return (
-    <div className="bg-background-orange mb-[60px] flex h-full w-full">
+    <div className="mb-[60px] flex h-full w-full bg-background-orange">
       <div className="relative mx-auto flex h-full w-screen max-w-[1440px] flex-col-reverse items-center justify-between gap-12 px-4 py-20 xl:h-screen xl:flex-row xl:gap-0 xl:pb-10 xl:pl-16 xl:pr-[137px]">
         <div className="h-auto max-h-[450px] w-full xl:h-full xl:max-h-full xl:w-full xl:max-w-[588px]">
           {image && (
@@ -40,7 +40,7 @@ const CaseHero: React.FC<CaseProps> = ({
           )}
         </div>
         <div className="flex w-full max-w-[487px] flex-col gap-8 xl:gap-6">
-          <h1 className="text-32 xl:text-44 font-bold">{header}</h1>
+          <h1 className="text-32 font-bold xl:text-44">{header}</h1>
           {description && <p className="text-16 font-medium">{description}</p>}
           <ul className="m-0 flex list-none flex-row flex-wrap gap-4 xl:gap-6">
             {categories.map((category) => {
@@ -49,7 +49,7 @@ const CaseHero: React.FC<CaseProps> = ({
               return (
                 <li
                   key={category._id}
-                  className="text-background-white flex items-center gap-2 font-medium"
+                  className="flex items-center gap-2 font-medium text-background-white"
                 >
                   {IconComponent && (
                     <IconComponent
