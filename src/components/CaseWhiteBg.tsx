@@ -27,19 +27,22 @@ const CaseWhiteBg: React.FC<CaseProps> = ({
   categories,
 }) => {
   const createSlug = (header: string) => {
-    return header.toLowerCase().replace(/\s+/g, '-');
+    return header
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, '')
+      .replace(/\s+/g, '-');
   };
 
   const slug = createSlug(header);
 
   return (
-    <section id="projects" className="bg-background-white flex h-full w-full">
+    <section id="projects" className="flex h-full w-full bg-background-white">
       <div className="mx-auto flex h-full w-screen max-w-[1440px] flex-col justify-center px-4 py-20 xl:h-screen xl:py-0 xl:pl-[142px] xl:pr-[137px]">
         <Link
           className={`w-fit cursor-pointer ${wip ? 'pointer-events-none cursor-default' : ''}`}
           href={`/${slug}`}
         >
-          <h2 className="text-40 mb-8 flex gap-2 font-bold">
+          <h2 className="mb-8 flex gap-2 text-40 font-bold">
             <span className="text-background-orange">{caseNumber}</span>
             {header}
           </h2>
@@ -56,12 +59,12 @@ const CaseWhiteBg: React.FC<CaseProps> = ({
             sizes="100vw"
             className="h-full max-h-[350px] w-full object-cover xl:max-h-full xl:max-w-[676px]"
           />
-          <div className="bg-background-orange relative flex w-full flex-col overflow-hidden p-10 xl:max-w-[450px] xl:pb-0 xl:pr-14 xl:pt-10">
-            <h3 className="text-background-white text-14 mb-6 uppercase">
+          <div className="relative flex w-full flex-col overflow-hidden bg-background-orange p-10 xl:max-w-[450px] xl:pb-0 xl:pr-14 xl:pt-10">
+            <h3 className="mb-6 text-14 uppercase text-background-white">
               {preamble}
             </h3>
-            <p className="text-14 mb-8 font-medium">{description}</p>
-            <ul className="text-background-white m-0 flex w-full list-none flex-row flex-wrap gap-4">
+            <p className="mb-8 text-14 font-medium">{description}</p>
+            <ul className="m-0 flex w-full list-none flex-row flex-wrap gap-4 text-background-white">
               {categories.map((category) => {
                 const IconComponent =
                   categoryIconMap[category.title.toLowerCase()] || null;
@@ -80,8 +83,8 @@ const CaseWhiteBg: React.FC<CaseProps> = ({
               })}
             </ul>
             {wip && (
-              <div className="bg-yellow absolute -right-14 top-3 flex h-6 w-40 rotate-45 items-center justify-center">
-                <span className="text-background-orange text-14 font-bold">
+              <div className="absolute -right-14 top-3 flex h-6 w-40 rotate-45 items-center justify-center bg-yellow">
+                <span className="text-14 font-bold text-background-orange">
                   WIP
                 </span>
               </div>

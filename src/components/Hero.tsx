@@ -52,7 +52,7 @@ const Hero: React.FC<HeroProps> = ({ heading, tagline, image, links }) => {
               </div>
               <div className="flex flex-col text-48 font-bold text-background-white">
                 <span className="text-background-white">0</span>
-                <span className="text-yellow lg:text-background-white">4</span>
+                <span className="text-yellow lg:text-background-white">5</span>
               </div>
             </div>
           </div>
